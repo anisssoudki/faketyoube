@@ -1,0 +1,39 @@
+
+
+<h2 > <a class="btn-primary" href= "/videos/new">Add Video</a></h2><br><br>
+
+
+<div class="container">
+<h1 class="p-3 mb-2 bg-primary text-white class="jumbotron" >Welcome <%=@user.name%></h1><br><br>
+</div>
+
+<h1><%@user.videos.each do |v|%></h1>
+
+<div class='container'>
+<h3 class="text-light"id="gradient"> <%=v.name%> </h3>
+</div>
+
+</h1><br>
+<div  class="contrainer"><%=v.link%></div><br>
+<div class="container">
+<h4 class="float-left" > <a class="btn-warning" 
+
+href= "/videos/<%=v.id%>/edit">Edit Video</a>
+</div>
+</h4>
+<div class="container">
+ <form class="float-right" action= "/videos/<%=v.id%>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input class="btn-danger" type="submit" name="" value="Delete This Video">
+    </form>
+    </div><br><br><br><br><br><br>
+<%end%>
+<style> #gradient  {
+
+
+display: inline-block;
+}
+   </style>
+
+
+

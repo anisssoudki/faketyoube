@@ -1,0 +1,12 @@
+
+Edit
+
+<h1 class="text-white">Video Name</h1>
+<form action="/videos/<%=@video.id%>" method="post">
+<input type="hidden" name="_method" value="patch">
+ <input type="text" name="name" value="" placeholder="Video Name"><br>
+
+ <h1 class="text-white">Right click on any youtube video copy embeded code and paste below to upload</h1><br>
+ <input type="text" name="link">
+  <input type="submit" value="Create Entry">
+</form>

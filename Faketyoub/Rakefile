@@ -1,0 +1,7 @@
+#rake is a way to use the command line to run a bunch of code without having to run it manually
+#rake -T will give me all the rake tasks
+
+ENV["SINATRA_ENV"] ||= "development"
+
+require_relative './config/environment'
+require 'sinatra/activerecord/rake'

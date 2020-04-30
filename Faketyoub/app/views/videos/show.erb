@@ -1,0 +1,29 @@
+
+<div class="container">
+<h2><%=@video.name%></h2>
+</div><br>
+<div>
+<%=@video.link%><br>
+</h4>
+</div>
+<%# if im the only user that owns entry show edit and delte %>
+<% if authorized_to_edit?(@video)%>
+<h4>
+    <a href="/videos/<%=@video.id%>/edit">Edit Video</a>
+</h4>
+
+   
+    <form  action="<%@video.id%>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input class="btn-danger" type="submit" name="" value="Delete this Entry">
+    </form><br><br><br>
+<%end%>
+
+<div class="container">
+<form method="post" action="/comments">
+<textarea class="form-control" type="textarea" name="content"  placeholder="comments here"></textarea>
+
+
+<input type="hidden" name="video_id" value=<%=@video.id%> />
+<input type="hidden" name="user_id" value=<%=current_user.id%> />
+<input type="submit">

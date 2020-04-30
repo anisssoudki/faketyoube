@@ -1,0 +1,29 @@
+
+<div class="container">
+<a  class="btn btn-primary" href="/">Home</a>
+</div><br>
+<%@videos.collect do |v|%>
+<div>
+<h1 class="text-light">
+<%= v.name%>
+<%=v.id%>
+</h1>
+<div class="mx-auto"  >
+<%= v.link%>
+</div>
+<div class="container">
+<%v.comments.map do |c|%>
+<div class="text-success">
+ <h3 class ="float-left" ><%=c.user.name%></h3> 
+ </div><br><br>
+<h5 class="text-white"><strong><ol><%=c.content%></ol></strong></h5>
+<%end%>
+</div>
+<div class="float-none">
+<button type="button" class="btn btn-primary btn-sm">
+<a class="text-light" href="/videos/<%=v.id%>">Input New Comment</a>
+</button>
+</div>
+<%end%>
+
+
