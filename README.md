@@ -3,7 +3,7 @@
 installation instructions
 gem install fakeTyoube
 
-usage*=> run shotgun 
+To use this app, just clone, run rake db:migrate and then run shotgun
 
 
 A Simple application that basically lets the user save youtube videos by copying the Ifram embeded code form any youtube video/ this app works like a library for all the videos that are stored in. Users can Use full crud to manipulate the video class only if they are allowed to/ so its specific to their page.
