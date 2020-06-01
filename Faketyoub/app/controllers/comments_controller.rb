@@ -13,3 +13,4 @@ class CommentsController < ApplicationController
        end
     end 
 end
+#no empty comments allowed
