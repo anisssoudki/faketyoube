@@ -1,84 +1,86 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
 
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeTyoube</title>
+  </head>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FakeTyoube</title>
-</head>
 <body id="grad" class="p-3 mb-2 bg-secondary">
+    
+    <div class="container" id="" >
+      <h1 class="p-3 mb-2 bg-primary" ><div class="p-1 mb-1 bg-primary text-white"><p class="text-light">Faketyoube <img id="logo"  style="float:none" src="https://github.com/anisssoudki/just-a-logo/blob/master/Screenshot%20(27).png?raw=true">
+    </h1>
+    </div>
+
+  <br><br>
+
+    <style> #grad {
+      background: #536976;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #292E49, #536976);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #292E49, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+    </style>
+
+  <style> #logo{
+    width: 50px;
+  }
+  </style>
+
   
-<div class="container" id="" >
-<h1 class="p-3 mb-2 bg-primary" ><div class="p-1 mb-1 bg-primary text-white"><p class="text-light">Faketyoube <img id="logo"  style="float:none" src="https://github.com/anisssoudki/just-a-logo/blob/master/Screenshot%20(27).png?raw=true">
-</h1>
-</div>
-<br><br>
-<style> #grad {
-background: #536976;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #292E49, #536976);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #292E49, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  <style> #fb{
+    width: 120px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+  </style>
 
-}
-   </style>
-<style> #logo{
-  width: 50px;
-}
-   </style>
 
- 
-<style> #fb{
-  width: 120px;
-   display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-   </style>
- <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-  <div class="fb-send" 
-    data-href="https://www.your-domain.com/your-page.html" 
-    data-layout="button_count">
+
+  <div class="float-right">  
+    <a href="https://www.facebook.com/" target="_blank">
+    <img   id="fb" alt="fbshare" src="https://platform-cdn.sharethis.com/img/facebook.svg">
   </div>
 
-
-<div class="float-right">  
-  <a href="https://www.facebook.com/" target="_blank">
- <img   id="fb" alt="fbshare" src="https://platform-cdn.sharethis.com/img/facebook.svg">
-</div>
-<div class="float-left"> 
-  <a href="https://www.twitter.com/" target="_blank">
- <img   id="fb" alt="fbshare" src="https://platform-cdn.sharethis.com/img/twitter.svg">
+  <div class="float-left"> 
+    <a href="https://www.twitter.com/" target="_blank">
+    <img   id="fb" alt="fbshare" src="https://platform-cdn.sharethis.com/img/twitter.svg">
   </div>
- <a href="https://www.youtube.com/" target="_blank">
- <img   id="fb" alt="fbshare" src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR3zL-31baIAJ3Jj73qiyxn59Tumq9mdjRfItdGgO0XRkxkjIgu&usqp=CAU'><br>
+
+  <a href="https://www.youtube.com/" target="_blank">
+  <img   id="fb" alt="fbshare" src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR3zL-31baIAJ3Jj73qiyxn59Tumq9mdjRfItdGgO0XRkxkjIgu&usqp=CAU'>
+  <br>
 
 
-<h1> <div>
+  <h1>
+  <div>
         <% if logged_in?%>
-      <a class="text-danger" href="/logout"> Logout</a><br>
-    </div><br>
-   <%end%>
-</h1>
-<div class="container">
-<a  class="btn btn-primary" href="/videos">Browse All Videos</a>
-</div><br><br>
+         <a class="text-danger" href="/logout"> Logout</a><br>
+  </div>
+        <%end%>
+    
+  </h1> 
+  <br>
+
+  <div class="container">
+  <a  class="btn btn-primary" href="/videos">Browse All Videos</a>
+  </div>
+
+  <br><br>
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
 <style> * {
   text-align: center
-}
+  }
 </style>
 <%=yield%>
-
 
 </html>
